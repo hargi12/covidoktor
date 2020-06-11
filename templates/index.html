@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>POE -: MOH covid-19 Portal</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="../static/css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="../static/css/style.css"/>
+</head>
+<body>
+	<div class="page-content">
+		<div class="form-v1-content">
+			<div class="wizard-form">
+		        <form class="form-register" action="/citizen" method="post">
+		        	<div id="form-total">
+			            <h2>
+			            	<p class="step-icon"><span class="logo"></span></p>
+			            	<span class="step-text">Ministry of Health</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									
+									<p style="font-weight: bold; color: #000;">Citizen Surveillance Portal</p>
+									
+								
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Personal Details</legend>
+											
+											<div class="parent-content-holder">
+												<div class="content-holder">
+													<div class="content-label">Citizen Name:</div>
+													<div class="content-right"><input type="text" class="form-control"  name="myname" placeholder="Enter name"  required></div>
+                                                </div>
+                                                <div class="content-holder">
+													<div class="content-label">Phone No:</div>
+													<div class="content-right"><input type="text" class="form-control" id="phone" name="myphone" placeholder="Enter your phone number" minlength="8" maxlength="14" required></div>
+                                                </div>
+                                                
+                                                <div class="content-holder">
+													<div class="content-label">Where do you live:</div>
+													<div class="content-right"><textarea class="form-control display"  rows="4" name="myresidence" placeholder="Where do you stay in Uganda. E.g. Kisasi, Speke Apartments"></textarea>
+
+													</div>
+                                                </div>
+                                                <div class="content-holder">
+													<div class="content-label">District:</div>
+														<div class="content-right">
+															<select class="selectpicker countrypicker" name="mydistrict"  data-live-search="true" data-default="None" data-flag="true"></select>	
+														</div>
+                                                </div>
+                                               
+                                                <div class="content-holder">
+													<div class="content-label">Regions:</div>
+														<div class="content-right">
+															<select class="selectpicker countrypicker" name="myregion"  data-live-search="true" data-default="None" data-flag="true"></select>	
+														</div>
+												</div>
+												
+												
+
+												<div class="content-holder">
+													<div class="content-label">What Countries have you visited in last 14days:</div>
+														<div class="content-right">
+															<select class="selectpicker countrypicker" name="mycountryvisit"  data-live-search="true" data-default="None" multiple></select>	
+														</div>
+                                                </div>
+											</div>
+										</fieldset>
+									</div>
+                                </div>
+                                
+                                <div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Have you been in contact with Someone with Covid-19 Symptoms</legend>
+											<div class="parent-content-holder">
+												<div class="content-holder">
+													
+													<input type="checkbox" class="form-control"  value ="Yes" name="mycovidcontactt" style="margin-right: 2%;" ><span>Yes</span>
+													<input type="checkbox" class="form-control"  value ="No" name="mycovidcontact" style="margin-right: 2%;" ><span>No</span>
+												</div>
+												
+											</div>
+										</fieldset>
+									</div>
+                                </div>
+
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Do you have any of the following Symptoms</legend>
+											<div class="parent-content-holder">
+												<div class="content-holder">
+													
+													<input type="checkbox" class="form-control"  value ="Yes" name="myfever" style="margin-right: 2%;" ><span>Fever</span>
+													<input type="checkbox" class="form-control"  value ="Yes" name="myheadache" style="margin-right: 2%;" ><span>Headache</span>
+													<input type="checkbox" class="form-control"  value ="Yes" name="mycough" style="margin-right: 2%;" ><span>Cough</span>
+												</div>
+												<div class="content-holder">
+													<input type="checkbox" class="form-control"  value ="Yes" name="mysorethroat" style="margin-right: 2%;" ><span>Sore throat</span>
+													<input type="checkbox" class="form-control"  value ="Yes" name="mygeneralweakness" style="margin-right: 2%;" ><span>General weakness</span>
+													<input type="checkbox" class="form-control"  value ="Yes" name="mybreathing" style="margin-right: 2%;" ><span>Breathing Difficulty</span>
+												</div>
+												
+											</div>
+										</fieldset>
+									</div>
+                                </div>
+                                
+                                <div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Do you have any other Symptoms</legend>
+											<div class="parent-content-holder">
+												<div class="content-center"><textarea class="form-control display" rows="10" cols="10" name="myothersymptoms" placeholder="List any other Symptoms or signs you might be having"></textarea>
+
+                                                </div>
+												
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+			            </section>
+					</div>
+					<button type="submit" class="btnsubmit" name="submit">Submit</button> 
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	<script src="../static/js/jquery-3.3.1.min.js"></script>
+	<script src="../static/js/jquery.steps.js"></script>
+	<script src="../static/js/main.js"></script>
+    <script src="../static/js/countrypicker.js"></script>
+</body>
+</html>
